@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Bible Explorer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+    }
+    .cross-icon::before {
+      content: '✝';
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <header class="bg-blue-900 text-white py-6 shadow-md">
+    <div class="container mx-auto px-4 flex items-center justify-between">
+      <h1 class="text-3xl font-bold flex items-center">
+        <span class="cross-icon"></span>
+        My Bible Explorer
+      </h1>
+      <nav>
+        <a href="#/" class="text-white hover:text-gray-300 px-4">Home</a>
+      </nav>
+    </div>
+  </header>
+  <div class="subheader bg-blue-50 py-4">
+    <div class="container mx-auto px-4 flex flex-col sm:flex-row items-center justify-between">
+      <div class="subheadings mb-4 sm:mb-0">
+        <h2 id="subheading" class="text-2xl font-semibold text-blue-900"></h2>
+        <h3 id="viewing" class="text-lg text-gray-600"></h3>
+      </div>
+      <div id="search-area" class="flex items-center space-x-2">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search (e.g., 'John 3:16' or 'love')"
+          class="border border-gray-300 rounded-lg px-4 py-2 w-64 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <button id="search-button" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Search</button>
+      </div>
+    </div>
+  </div>
+  <div class="container mx-auto px-4 py-4">
+    <div id="breadcrumbs" class="text-sm text-gray-600 mb-4"></div>
+  </div>
+  <main class="container mx-auto px-4 pb-8">
+    <h4 id="list-heading" class="text-xl font-semibold text-blue-900 mb-4"></h4>
+    <div id="content" class="grid gap-4"></div>
+    <div id="search-nav-top" class="flex justify-center space-x-4 my-4"></div>
+    <div id="search-nav-bottom" class="flex justify-center space-x-4 my-4"></div>
+  </main>
+  <footer class="bg-blue-900 text-white py-4 text-center">
+    <p>© 2025 My Bible Explorer. Powered by <a href="https://api.scripture.api.bible" class="text-blue-300 hover:underline">abZit</a>.</p>
+  </footer>
+  <script src="https://unpkg.com/fumsv2.min.js"></script>
+  <script src="my_key.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
