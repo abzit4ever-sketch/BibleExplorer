@@ -15,3 +15,4 @@ version for keywords and references — all client-side, no backend required.
 - **Frontend:** Vanilla JavaScript, HTML, Tailwind CSS (CDN)
 - **Data Source:** [scripture.api.bible](https://scripture.api.bible)
 - **Routing:** Custom hash-based router (no framework)
+Website link - https://bibleexplorer-1.onrender.com/
